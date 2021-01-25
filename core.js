@@ -1,4 +1,3 @@
-
 const $ = (prop) => document.querySelector(prop);
 const $$ = (prop) => document.querySelectorAll(prop);
 function animateElement(element, animation){
@@ -13,7 +12,13 @@ document.documentElement.onload = function(){
   //display loading screen
 }
 window.onload = function(){
-  //hide loading screen
+  setTimeout(function(){
+    $("#loader").style.transition = "0.5s";
+    $("#loader").style.opacity = 0;
+  },2000)
+  setTimeout(function(){
+    $("#loader").style.display = "none";
+  },2500)
 }
 
 function openNav(){
