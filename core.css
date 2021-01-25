@@ -1,1 +1,251 @@
 
+:root{
+  --c1: #FFF;
+  --c3: rgb(150,150,150);
+  --cd: #000;
+  --mont: 'Montserrat', sans-serif;
+  --poi: 'Poiret One', cursive;
+  --shad-col1: rgba(0,0,0,0.25);
+  --shad-col2: rgba(0,0,0,0.75);
+  --sh22: 2px 2px 5px 0 var(--shad-col1);
+  --sh-2-2: -2px -2px 5px 0 var(--c1);
+  --tr: transparent;
+}
+body, html {
+  margin: 0;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+a{
+  text-decoration:none;
+}
+input,
+textArea,
+button, select {
+  outline: none;
+}
+* {
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6{
+  text-align:center;
+  font-family:var(--poi);
+}
+p{
+  padding-left:10%;
+  padding-right:10%;
+  margin-top:15px;
+  margin-bottom:15px;
+  font-size:15px;
+  font-family:var(--mont);
+}
+
+.hov:hover{
+  cursor: pointer;
+}
+.parallax {
+  width: 100%;
+  height: 80%;
+  background-attachment: fixed;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.p-cov{
+  height:100%;
+  padding-top:10%;
+}
+.layer{
+  width:50px;
+  height:3px;
+  background:black;
+  background: black;
+}
+.layer:first-of-type{
+  margin-bottom:10px;
+}
+.layer:last-of-type{
+  margin-top:10px;
+}
+.nav-link{
+  transition:0.5s;
+  text-decoration:none;
+  color:var(--c1);
+  text-align:center;
+  font-size:50px;
+  display:block;
+}
+.nav-link:hover{
+  transition:0.5s;
+  background:var(--shad-col1);
+  box-shadow: inset 2px 0 0 0 var(--c1), inset -2px 0 0 0 var(--c1);
+}
+.nav-in{
+  transition:1s;
+  left:0;
+}
+.nav-out{
+  transition:1s;
+  left:-100%;
+}
+.ham-out{
+  opacity:0;
+  transform:rotate(45deg);
+  top:-50px !important;
+  transition:0.25s;
+  transition-timing-function: ease-out;
+}
+.ham-in{
+  opacity:1;
+  transform:rotate(0deg);
+  top:15px !important;
+  transition:0.25s;
+  transition-timing-function: ease-out;
+}
+.sec{
+  padding-top:20px;
+  padding-bottom:20px;
+  z-index:2;
+}
+.par-cov{
+  width: 80%;
+  height: 80%;
+  margin:auto;
+  background:rgba(0,0,0,0.5);
+  color:white;
+  text-align:center;
+  align-content:center;
+  justify-content:center;
+  vertical-align:center;
+}
+.par-cov > div{
+  position:relative;
+  top:50%;
+  margin:auto;
+  transform:translatey(-50%);
+  -ms-transform:translatey(-50%);
+}
+.centerY{
+  position:relative;
+  top:50%;
+  margin:auto;
+  transform:translatey(-50%);
+  -ms-transform:translatey(-50%);
+}
+
+#navbar{
+  font-family: var(--poi);
+}
+#logo{
+  background:var(--cd);
+  color:white;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  text-align:center;
+  padding-top:15px;
+}
+#hamburger-button{
+  position:fixed;
+  top:15px;
+  left:15px;
+  width:50px;
+  background:var(--tr);
+}
+#nav-wrapper{
+  position:absolute;
+  top:50%;
+  width:100%;
+  transform: translatey(-50%);
+  -ms-transform: translatey(-50%);
+}
+#nav-links{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0%;
+  background:var(--shad-col2);
+  z-index:100;
+}
+#close-nav{
+  position:absolute;
+  background:var(--tr);
+  width:50px;
+  height:50px;
+  top:25px;
+  right:25px;
+  transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+}
+#close-nav:before{
+  content:"";
+  position:absolute;
+  background:white;
+  width:50px;
+  height:2px;
+  top:25px;
+  transform:rotate(90deg);
+  -ms-transform:rotate(90deg);
+}
+#close-nav:after{
+  content:"";
+  position:absolute;
+  background:white;
+  width:50px;
+  height:2px;
+  top:25px;
+}
+#a-down{
+  color:white;
+  font-family:var(--poi);
+  border-top:solid white 1px;
+  border-bottom:solid white 1px;
+}
+#footer-nav-cont{
+  width:100%;
+  text-align:center;
+}
+#footer-nav-cont > .nl{
+  font-family: var(--mont);
+  color:var(--cd);
+  margin-left:20px;
+  margin-right:20px;
+  
+}
+#footer-nav-cont > a{
+  font-family: var(--mont);
+  color:var(--cd);
+  margin-left:10px;
+  margin-right:10px;
+}
+#footer-bottom-cont{
+  font-family:var(--mont);
+  text-align:center;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background:transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--c3); 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c3);
+}
+
+@media (max-width:400px){
+  .nav-link{
+    font-size:30px;
+  }
+  p{
+    font-size:15px;
+  }
+}
+@media (max-width:415px){
+  #footer-nav-cont > .nl{
+    display:block;
+  }
+}
