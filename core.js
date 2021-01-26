@@ -12,13 +12,11 @@ document.documentElement.onload = function(){
   //display loading screen
 }
 window.onload = function(){
-  setTimeout(function(){
-    $("#loader").style.transition = "0.5s";
-    $("#loader").style.opacity = 0;
-  },2000)
+  $("#loader").style.transition = "0.5s";
+  $("#loader").style.opacity = 0;
   setTimeout(function(){
     $("#loader").style.display = "none";
-  },2500)
+  },500)
 }
 
 function openNav(){
